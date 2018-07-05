@@ -1,0 +1,14 @@
+import  pyHook
+
+def  klavye(olay):
+    print('TIME: ' , olay.Time)
+    print('WINDOWS NAME : ', olay.WindowName)
+    print('ASCII : ' , olay.Ascii, chr(olay.Ascii))
+    print('KEY : ' , olay.Key)
+    print('KEYID : ' , olay.KeyID)
+    print('-------------------')
+    return True
+
+hm = pyHook.HookManager()
+hm.KeyDown = klavye
+hm.HookKeyboard()
